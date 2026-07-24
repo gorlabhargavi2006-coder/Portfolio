@@ -1,0 +1,19 @@
+
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Gorla Bhargavi Portfolio",
+  "scripts": {
+    "clean": "powershell -ExecutionPolicy Bypass -File clean-ports.ps1",
+    "dev": "npm run clean && concurrently --kill-others \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "install:all": "npm --prefix client install ; npm --prefix server install"
+  },
+  "keywords": [],
+  "author": "Gorla Bhargavi",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
